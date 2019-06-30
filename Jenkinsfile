@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''cd demo.application.parent
+        sh '''pwd
+cd demo.application.parent
 mvn clean initialize site package'''
       }
     }
