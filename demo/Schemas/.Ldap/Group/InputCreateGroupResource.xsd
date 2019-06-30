@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns:tns="http://www.tibco.com/xmlns/ldap/cloud/groupresource/input/create" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.tibco.com/xmlns/ldap/cloud/groupresource/input/create" xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="ActivityInput" type="tns:ActivityInputType"/>
+    <complexType name="ActivityInputType">
+        <sequence>
+            <element maxOccurs="1" minOccurs="1" name="group" type="tns:groupType"/>
+        </sequence>
+    </complexType>
+    <complexType name="groupType">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="allowExternalSenders" type="boolean"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="assignedLicenses" type="tns:assignedLicense.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="autoSubscribeNewMembers" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="classification" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="createdDateTime" type="dateTime"/>
+            <element maxOccurs="1" minOccurs="0" name="description" type="string"/>
+            <element maxOccurs="1" minOccurs="1" name="displayName" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="groupTypes" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="hasMembersWithLicenseErrors" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="isArchived" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="isSubscribedByMail" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="licenseProcessingState" type="tns:licenseProcessingState.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="mail" type="string"/>
+            <element maxOccurs="1" minOccurs="1" name="mailEnabled" type="boolean"/>
+            <element maxOccurs="1" minOccurs="1" name="mailNickname" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesLastSyncDateTime" type="dateTime"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="onPremisesProvisioningErrors" type="tns:onPremisesProvisioningError.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesSecurityIdentifier" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesSyncEnabled" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="preferredDataLocation" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="proxyAddresses" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="renewedDateTime" type="dateTime"/>
+            <element maxOccurs="1" minOccurs="1" name="securityEnabled" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="unseenCount" type="integer"/>
+            <element maxOccurs="1" minOccurs="0" name="visibility" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="onPremisesProvisioningError.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="category" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="occurredDateTime" type="dateTime"/>
+            <element maxOccurs="1" minOccurs="0" name="propertyCausingError" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="assignedLicense.Type">
+        <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="disabledPlans" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="skuId" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="licenseProcessingState.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

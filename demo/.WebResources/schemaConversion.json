@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/demo/Service Descriptors/service.UnitsService-UnitsService.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://xmlns.example.com/UnitsService/parameters"
+}]}

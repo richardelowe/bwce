@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns:tns="http://www.tibco.com/xmlns/ldap/cloud/userresource/input/create" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.tibco.com/xmlns/ldap/cloud/userresource/input/create" xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="ActivityInput" type="tns:ActivityInputType"/>
+    <complexType name="ActivityInputType">
+        <sequence>
+            <element maxOccurs="1" minOccurs="1" name="user" type="tns:userType"/>
+        </sequence>
+    </complexType>
+    <complexType name="userType">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="aboutMe" type="string"/>
+            <element maxOccurs="1" minOccurs="1" name="accountEnabled" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="ageGroup" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="assignedLicenses" type="tns:assignedLicense.Type"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="assignedPlans" type="tns:assignedPlan.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="birthday" type="dateTime"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="businessPhones" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="city" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="companyName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="consentProvidedForMinor" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="country" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="department" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="deviceEnrollmentLimit" type="integer"/>
+            <element maxOccurs="1" minOccurs="1" name="displayName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="employeeId" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="faxNumber" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="givenName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="hireDate" type="dateTime"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="imAddresses" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="interests" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="isResourceAccount" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="jobTitle" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="legalAgeGroupClassification" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="licenseAssignmentStates" type="tns:licenseAssignmentState.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="mail" type="string"/>
+            <element maxOccurs="1" minOccurs="1" name="mailNickname" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="mailboxSettings" type="tns:mailboxSettings.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="mobilePhone" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="mySite" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="officeLocation" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesDistinguishedName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesDomainName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesExtensionAttributes" type="tns:onPremisesExtensionAttributes.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesImmutableId" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesLastSyncDateTime" type="dateTime"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="onPremisesProvisioningErrors" type="tns:onPremisesProvisioningError.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesSamAccountName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesSecurityIdentifier" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesSyncEnabled" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="onPremisesUserPrincipalName" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="otherMails" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="passwordPolicies" type="string"/>
+            <element maxOccurs="1" minOccurs="1" name="passwordProfile" type="tns:passwordProfile.Type"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="pastProjects" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="postalCode" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="preferredLanguage" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="preferredName" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="provisionedPlans" type="tns:provisionedPlan.Type"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="proxyAddresses" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="responsibilities" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="schools" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="showInAddressList" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="signInSessionsValidFromDateTime" type="dateTime"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="skills" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="streetAddress" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="surname" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="usageLocation" type="string"/>
+            <element maxOccurs="1" minOccurs="1" name="userPrincipalName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="userType" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="onPremisesExtensionAttributes.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute1" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute10" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute11" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute12" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute13" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute14" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute15" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute2" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute3" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute4" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute5" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute6" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute7" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute8" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="extensionAttribute9" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="passwordProfile.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="forceChangePasswordNextSignIn" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="forceChangePasswordNextSignInWithMfa" type="boolean"/>
+            <element maxOccurs="1" minOccurs="0" name="password" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="assignedPlan.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="assignedDateTime" type="dateTime"/>
+            <element maxOccurs="1" minOccurs="0" name="capabilityStatus" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="service" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="servicePlanId" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="licenseAssignmentState.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="assignedByGroup" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="disabledPlans" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="error" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="skuId" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="state" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="onPremisesProvisioningError.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="category" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="occurredDateTime" type="dateTime"/>
+            <element maxOccurs="1" minOccurs="0" name="propertyCausingError" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="provisionedPlan.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="capabilityStatus" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="provisioningStatus" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="service" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="assignedLicense.Type">
+        <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="disabledPlans" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="skuId" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="mailboxSettings.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="archiveFolder" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="automaticRepliesSetting" type="tns:automaticRepliesSetting.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="language" type="tns:localeInfo.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="timeZone" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="workingHours" type="tns:workingHours.Type"/>
+        </sequence>
+    </complexType>
+    <complexType name="automaticRepliesSetting.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="externalAudience" type="tns:externalAudienceScope.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="externalReplyMessage" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="internalReplyMessage" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="scheduledEndDateTime" type="tns:dateTimeTimeZone.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="scheduledStartDateTime" type="tns:dateTimeTimeZone.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="status" type="tns:automaticRepliesStatus.Type"/>
+        </sequence>
+    </complexType>
+    <complexType name="workingHours.Type">
+        <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="daysOfWeek" type="tns:dayOfWeek.Type"/>
+            <element maxOccurs="1" minOccurs="0" name="endTime" type="time"/>
+            <element maxOccurs="1" minOccurs="0" name="startTime" type="time"/>
+            <element maxOccurs="1" minOccurs="0" name="timeZone" type="tns:timeZoneBase.Type"/>
+        </sequence>
+    </complexType>
+    <complexType name="localeInfo.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="displayName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="locale" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="automaticRepliesStatus.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="dateTimeTimeZone.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="dateTime" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="timeZone" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="dayOfWeek.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="timeZoneBase.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="name" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="externalAudienceScope.Type">
+        <sequence>
+            <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
