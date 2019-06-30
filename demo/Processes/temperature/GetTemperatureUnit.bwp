@@ -183,7 +183,7 @@
         createdOn="Thu Aug 09 09:45:22 IST 2018" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="6.5.0 V62 2018-08-07" scalable="true"
-        singleton="true" stateless="false" type="IT"/>
+        singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context=""
         input="{http://www.example.com/namespaces/tns/1529318275884}Element" output="{http://www.example.com/namespaces/tns/response}Element"/>
     <tibex:ProcessTemplateConfigurations/>

@@ -175,7 +175,7 @@
         createdOn="Mon Oct 15 08:04:41 IST 2018" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="6.5.0 V63 2018-08-08" scalable="true"
-        singleton="true" stateless="false" type="IT"/>
+        singleton="true" stateless="true" type="IT"/>
     <tibex:ProcessInterface context="" input="" output=""/>
     <tibex:ProcessTemplateConfigurations/>
     <notation:Diagram measurementUnit="Pixel" type="BWProcess"

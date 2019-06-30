@@ -1156,7 +1156,7 @@
                                     inputVariable="GetDistance-input"
                                     name="GetDistance"
                                     outputVariable="GetDistance"
-                                    tibex:xpdlId="0ea14aa9-27bc-4f84-b6a8-8310e567bc39"
+                                    tibex:xpdlId="d8beea84-675a-4978-97ac-9f3db0c3ffa5"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:targets>
                                     <bpws:target linkName="LogToGetDistance"/>
@@ -1177,7 +1177,7 @@
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tns=&quot;http://xmlns.example.com/UnitsService/parameters&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;get&quot;/>&lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&lt;tns4:ActivityInput>&lt;logLevel>&lt;xsl:value-of select=&quot;&amp;quot;Info&amp;quot;&quot;/>&lt;/logLevel>&lt;message>&lt;xsl:value-of select=&quot;concat(&amp;quot;Received request for region&amp;quot;, $get/parameters/tns:getdistanceunitGetParameters/tns:region)&quot;/>&lt;/message>&lt;/tns4:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="Log-input" name="Log"
-                                    tibex:xpdlId="3e1fd0ce-684e-4d2c-8397-6f1a37a270a4" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    tibex:xpdlId="375c8924-f67e-4917-9f30-b5ba27d96e14" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:sources>
                                     <bpws:source linkName="LogToGetDistance"/>
                                     </bpws:sources>
@@ -1241,7 +1241,7 @@
                                     inputVariable="GetTemperature-input"
                                     name="GetTemperature"
                                     outputVariable="GetTemperature"
-                                    tibex:xpdlId="88a00a67-1b50-4238-8040-6af6e868e3be"
+                                    tibex:xpdlId="be7106f6-82e2-48cb-a153-100ef3bac16d"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:sources>
                                     <bpws:source linkName="CallProcess1TogetOut1"/>
