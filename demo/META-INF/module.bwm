@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_TCjXkJuJEeiY4r2nj5mC1w" targetNamespace="http://tns.tibco.com/bw/composite/demo" name="demo" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_I95J0puLEeiY4r2nj5mC1w" name="getdistanceunit" promote="ComponentUnitsService/getdistanceunit">
+    <sca:interface.wsdl xmi:id="_I95J1puLEeiY4r2nj5mC1w" interface="http://xmlns.example.com/20180809094733PLT#wsdl.interface(getdistanceunit)" scaext:wsdlLocation="../Processes/service/UnitsService.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_I95J15uLEeiY4r2nj5mC1w" name="RestService" path="/getdistanceunit/{region}" docBasePath="http://localhost:7777/demo" docResourcePath="UnitsService" basePath="/" connector="demo.UnitsService" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/service.UnitsService-UnitsService.json">
+      <operation xmi:id="_I95J2ZuLEeiY4r2nj5mC1w" operationName="get" nickname="getdistanceunit" httpMethod="GET" responseStyle="json_root">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_I-MEwJuLEeiY4r2nj5mC1w">
+        <parameterMapping xmi:id="_I-MEwZuLEeiY4r2nj5mC1w" parameterName="region" parameterType="Path" required="true"/>
+      </parameters>
+      <advancedConfig xmi:id="_I95J2JuLEeiY4r2nj5mC1w" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_I95J2puLEeiY4r2nj5mC1w" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_OFbEUpuLEeiY4r2nj5mC1w" name="gettemperatureunit" promote="ComponentUnitsService/gettemperatureunit">
+    <sca:interface.wsdl xmi:id="_OFcScJuLEeiY4r2nj5mC1w" interface="http://xmlns.example.com/20180809094733PLT#wsdl.interface(gettemperatureunit)" scaext:wsdlLocation="../Processes/service/UnitsService.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_OFdgkJuLEeiY4r2nj5mC1w" name="RestService1" path="/gettemperatureunit/{region}" docBasePath="http://localhost:7777/demo" docResourcePath="UnitsService" basePath="/" connector="demo.UnitsService" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/service.UnitsService-UnitsService.json">
+      <operation xmi:id="_OFeHoJuLEeiY4r2nj5mC1w" operationName="get" nickname="gettemperatureunit" httpMethod="GET" responseStyle="json_root">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_OFeusJuLEeiY4r2nj5mC1w">
+        <parameterMapping xmi:id="_OFeusZuLEeiY4r2nj5mC1w" parameterName="region" parameterType="Path" required="true"/>
+      </parameters>
+      <advancedConfig xmi:id="_OFdgkZuLEeiY4r2nj5mC1w" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_OFeHoZuLEeiY4r2nj5mC1w" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_THp6AJuJEeiY4r2nj5mC1w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_THzD8JuJEeiY4r2nj5mC1w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_THzD8ZuJEeiY4r2nj5mC1w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_THzD8puJEeiY4r2nj5mC1w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TH808JuJEeiY4r2nj5mC1w" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TH808ZuJEeiY4r2nj5mC1w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TH808puJEeiY4r2nj5mC1w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TH8085uJEeiY4r2nj5mC1w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TIF-4JuJEeiY4r2nj5mC1w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VGowEJh9EemgYYhDSmy43A" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:component xmi:id="_I9vY0JuLEeiY4r2nj5mC1w" name="ComponentUnitsService" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_I9vY0ZuLEeiY4r2nj5mC1w" processName="service.UnitsService"/>
+    <sca:service xmi:id="_I95J0JuLEeiY4r2nj5mC1w" name="getdistanceunit">
+      <sca:interface.wsdl xmi:id="_I95J0ZuLEeiY4r2nj5mC1w" interface="http://xmlns.example.com/20180809094733PLT#wsdl.interface(getdistanceunit)" scaext:wsdlLocation="../Processes/service/UnitsService.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_OFbEUJuLEeiY4r2nj5mC1w" name="gettemperatureunit">
+      <sca:interface.wsdl xmi:id="_OFbEUZuLEeiY4r2nj5mC1w" interface="http://xmlns.example.com/20180809094733PLT#wsdl.interface(gettemperatureunit)" scaext:wsdlLocation="../Processes/service/UnitsService.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

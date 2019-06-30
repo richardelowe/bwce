@@ -1,0 +1,81 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/getdistanceunit/{region}" : {
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "getdistanceunit",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "region",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Element to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Element"
+            }
+          }
+        }
+      }
+    },
+    "/gettemperatureunit/{region}" : {
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "gettemperatureunit",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "region",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Element to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Element"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Element" : {
+      "type" : "object",
+      "required" : [ "unit", "metric" ],
+      "properties" : {
+        "unit" : {
+          "type" : "string"
+        },
+        "metric" : {
+          "type" : "boolean"
+        },
+        "subUnitType" : {
+          "type" : "string"
+        },
+        "numberOfSubUnits" : {
+          "type" : "integer"
+        }
+      }
+    }
+  }
+}
