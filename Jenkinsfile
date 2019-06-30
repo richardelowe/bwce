@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''pwd
 cd demo.application.parent
-mvn clean initialize site package'''
+mvn clean initialize package'''
       }
     }
   }
