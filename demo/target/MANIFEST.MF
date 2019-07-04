@@ -1,4 +1,4 @@
-Manifest-Version: 1.0.0.201906301541
+Manifest-Version: 1.0.0.201906302220
 Bundle-SymbolicName: demo
 Bundle-ManifestVersion: 2
 TIBCO-BW-Edition: bwcf
@@ -12,7 +12,7 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-Version: 6.5.0 V62 2018-08-07
 Bundle-Name: Demo Module
-Bundle-Version: 1.0.0.201906301541
+Bundle-Version: 1.0.0.201906302220
 Bundle-ClassPath: .
 TIBCO-BW-ApplicationModule: META-INF/module.bwm
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
