@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bwce-unittestjenkins-deployment
+  labels:
+    app: bwce-unittestjenkins
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bwce-unittestjenkins
+  template:
+    metadata:
+      labels:
+        app: bwce-unittestjenkins
+    spec:
+      containers:
+      - name: bwce-unittestjenkins
+        image: bwceacrdemo.azurecr.io/bwce-unittestjenkins
+        ports:
+        - name: rest
+          containerPort: 9494
+        - name: soap
+          containerPort: 9595
+        imagePullPolicy: Always
+        env:
+        - name: BW_PROFILE
+          value: default
+        - name: BW_LOGLEVEL
+          value: ERROR
+        - name: BW_APP_MONITORING_CONFIG
+          value: "{\"url\":\"http://23.101.229.160:80\"}"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bwce-unittestjenkins
+spec:
+  ports:
+  - name: rest
+    port: 9494
+  - name: soap
+    port: 9595
+  selector:
+    app: bwce-unittestjenkins
+  type: LoadBalancer

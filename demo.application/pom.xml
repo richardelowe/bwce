@@ -52,7 +52,6 @@
         <version>0.26.1</version>
         <configuration>
           <skip>false</skip>
-          <dockerHost>${bwdocker.host}</dockerHost>
           <certPath>${bwdocker.certPath}</certPath>
           <images>
             <image>
